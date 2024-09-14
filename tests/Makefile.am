@@ -34,6 +34,9 @@ QUERYTESTS = \
 	queryds.6 \
 	queryrd.1 \
 	queryrd.2 \
+	querysh.1 \
+	querysh.2 \
+	querysh.3 \
 	#
 
 TESTS = testdump ${QUERYTESTS}

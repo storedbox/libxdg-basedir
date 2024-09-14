@@ -119,6 +119,11 @@ const char * const * xdgConfigDirectories(xdgHandle *handle);
   * @return A null-terminated list of directory strings. */
 const char * const * xdgSearchableConfigDirectories(xdgHandle *handle);
 
+/** Base directory for user-specific state data files.
+  * @param handle Handle to data cache, initialized with xdgInitHandle().
+  * @return a path as described by the standards. */
+const char * xdgStateHome(xdgHandle *handle);
+
 /** Base directory for user-specific non-essential data files.
   * @param handle Handle to data cache, initialized with xdgInitHandle().
   * @return a path as described by the standards. */

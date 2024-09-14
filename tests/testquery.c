@@ -77,6 +77,13 @@ int main(int argc, char *argv[])
 		else
 			return 1;
 	}
+	else if (strcmp(datatype, "state") == 0)
+	{
+		if (strcmp(querytype, "home") == 0)
+			printAndFreeString(xdgStateHome(NULL));
+		else
+			return 1;
+	}
 	else if (strcmp(datatype, "cache") == 0)
 	{
 		if (strcmp(querytype, "home") == 0)

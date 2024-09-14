@@ -44,6 +44,7 @@ int main(int argc, char* argv[])
 	printf("${XDG_CONFIG_HOME:-$HOME/.config}:${XDG_CONFIG_DIRS:-/etc/xdg}=");
 	for (item = xdgSearchableConfigDirectories(&handle); *item; item++)
 		printf("%s%c", *item, (item[1] ? ':' : '\n'));
+	printf("${XDG_STATE_HOME:-$HOME/.local/state}=%s\n", xdgStateHome(&handle));
 	printf("${XDG_CACHE_HOME:-$HOME/.cache}=%s\n", xdgCacheHome(&handle));
 	xdgWipeHandle(&handle);
 	return 0;
